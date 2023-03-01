@@ -17,21 +17,35 @@
   <body>
     <div id="root"></div>
     <!--<script type="text/javascript">-->
-        <script type="text/babel">
+    <script type="text/babel">
         /*let ul = React.createElement("ul", {style: {color: "blue"}},
           React.createElement("li", null, "save"),
           React.createElement("li", null, "me"),
           React.createElement("li", null, "JSX")
-        )*/
-        //let heading = React.createElement("h1", null, "Getting Started with React!!")
-        //ReactDOM.render(heading, document.getElementById("root"));
-        //ReactDOM.render(ul, document.getElementById("root"));
-        //ReactDOM.render(React.createElement("h1", null, "Getting Started with React"), document.getElementById("root"));
+        )
+        let heading = React.createElement("h1", null, "Getting Started with React!!")
+        ReactDOM.render(heading, document.getElementById("root"));
+        ReactDOM.render(ul, document.getElementById("root"));
+        ReactDOM.render(React.createElement("h1", null, "Getting Started with React"), document.getElementById("root"));
         ReactDOM.render(
           <ul>
             <li>🤖</li>
             <li>🤠</li>
             <li>🌝</li>
+          </ul>,
+          document.getElementById("root")
+        )*/
+        let robot = "🤖";
+        let cowboy = "🤠";
+        let moon = "🌝";
+        let name = "React";
+        ReactDOM.render(
+          <ul>
+            <li>{robot}</li>
+            <li>{cowboy}</li>
+            <li>{moon}</li>
+            <li>{name.toUpperCase()}</li>
+            <li>{name.length}</li>
           </ul>,
           document.getElementById("root")
         )
