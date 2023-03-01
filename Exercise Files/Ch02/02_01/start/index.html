@@ -34,7 +34,7 @@
             <li>🌝</li>
           </ul>,
           document.getElementById("root")
-        )*/
+        )
         let robot = "🤖";
         let cowboy = "🤠";
         let moon = "🌝";
@@ -48,6 +48,34 @@
             <li>{name.length}</li>
           </ul>,
           document.getElementById("root")
+        )*/
+        const Header = () => {
+          return (
+            <header>
+              <h1>Eve's Kitchen</h1>
+            </header>
+          )
+        }
+
+        const Main = () => {
+          return (
+            <section>
+              <p>We serve the most delicious food around</p>
+            </section>
+          )
+        }
+
+        const App = () => {
+          return (
+            <div>
+              <Header />
+              <Main />
+            </div>
+          )
+        }
+
+        ReactDOM.render(
+          <App />, document.getElementById("root")
         )
     </script>
   </body>
