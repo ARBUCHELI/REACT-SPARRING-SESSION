@@ -48,7 +48,7 @@
             <li>{name.length}</li>
           </ul>,
           document.getElementById("root")
-        )*/
+        )
         const Header = () => {
           return (
             <header>
@@ -70,6 +70,44 @@
             <div>
               <Header />
               <Main />
+            </div>
+          )
+        }
+
+        ReactDOM.render(
+          <App />, document.getElementById("root")
+        )*/
+        const Header = (props) => {
+          console.log(props);
+          return (
+            <header>
+              <h1>{props.name}'s Kitchen</h1>
+            </header>
+          )
+        }
+
+        const Main = (props) => {
+          return (
+            <section>
+              <p>We serve the most {props.adjective} food around</p>
+            </section>
+          )
+        }
+
+        const Footer = (props) => {
+          return (
+            <footer>
+              <p>Bucheli Web Development Copyright {props.year}</p>
+            </footer>
+          )
+        }
+
+        const App = () => {
+          return (
+            <div>
+              <Header name="Bucheli"/>
+              <Main adjective="amazing"/>
+              <Footer year={new Date().getFullYear()}/>
             </div>
           )
         }
